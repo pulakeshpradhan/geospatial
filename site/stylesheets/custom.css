@@ -1,77 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
 :root {
     --md-primary-fg-color: #008080;
     /* Teal */
     --md-primary-fg-color--light: #33a6a6;
     --md-primary-fg-color--dark: #004d4d;
-    --md-text-font: 'Inter', sans-serif;
-}
-
-body {
-    font-family: var(--md-text-font);
 }
 
 .md-header {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .md-typeset h1 {
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-weight: 700;
     color: var(--md-primary-fg-color);
-    margin-bottom: 1.5rem;
-}
-
-/* Professional Footer Nav */
-.md-footer-nav {
-    background-color: #f8fafc;
-    padding: 2rem 0;
-    border-top: 1px solid #e2e8f0;
-}
-
-.md-footer-nav__link {
-    transition: transform 0.2s ease;
-}
-
-.md-footer-nav__link:hover {
-    transform: translateY(-2px);
-}
-
-.md-footer-meta {
-    background-color: #ffffff !important;
-    color: #64748b !important;
-    border-top: 1px solid #f1f5f9;
-}
-
-[data-md-color-scheme="slate"] .md-footer-nav {
-    background-color: #0f172a;
-    border-top-color: #1e293b;
-}
-
-[data-md-color-scheme="slate"] .md-footer-meta {
-    background-color: #020617 !important;
-    border-top-color: #0f172a;
 }
 
 .md-button--primary {
     background-color: var(--md-primary-fg-color) !important;
     border-color: var(--md-primary-fg-color) !important;
-    border-radius: 8px !important;
-    padding: 0.6rem 1.5rem !important;
-    font-weight: 600 !important;
-    transition: all 0.2s ease !important;
-}
-
-.md-button--primary:hover {
-    background-color: var(--md-primary-fg-color--dark) !important;
-    box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+    border-radius: 4px !important;
 }
 
 code {
-    background-color: rgba(0, 128, 128, 0.05) !important;
-    color: var(--md-primary-fg-color--dark) !important;
-    border-radius: 6px;
-    padding: 2px 6px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: #c7254e;
+}
+
+.md-footer {
+    margin-top: 2rem;
 }
