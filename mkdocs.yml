@@ -55,9 +55,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/pulakeshpradhan/geospatial
-    - icon: fontawesome/actions/git-pull-request
+    - icon: octicons/git-pull-request-24
       link: https://github.com/pulakeshpradhan/geospatial/pulls
-    - icon: fontawesome/actions/git-issue
+    - icon: octicons/issue-opened-24
       link: https://github.com/pulakeshpradhan/geospatial/issues
 
 extra_css:
