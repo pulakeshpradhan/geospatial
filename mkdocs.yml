@@ -1,10 +1,10 @@
 site_name: Geospatial Coding Hub
-site_url: https://pulakeshpradhan.github.io/samplemkdocs/
+site_url: https://pulakeshpradhan.github.io/geospatial/
 site_description: A simple and efficient guide for coding in geospatial science.
 site_author: Pulakesh Pradhan
 
-repo_name: pulakeshpradhan/samplemacdoc
-repo_url: https://github.com/pulakeshpradhan/samplemacdoc
+repo_name: pulakeshpradhan/geospatial
+repo_url: https://github.com/pulakeshpradhan/geospatial
 edit_uri: edit/main/docs/
 
 theme:
