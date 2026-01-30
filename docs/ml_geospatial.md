@@ -43,6 +43,32 @@ Random Forest is one of the most popular algorithms for Land Use/Land Cover (LUL
     predictions <- predict(rf_model, new_spectral_data)
     ```
 
+=== "GEE (JavaScript)"
+
+    ```javascript
+    // Load training points
+    var training = ee.FeatureCollection("projects/your-project/assets/training_points");
+    
+    // Select bands for training
+    var bands = ['B2', 'B3', 'B4', 'B8'];
+    var trainingData = sentinel2Image.select(bands).sampleRegions({
+      collection: training,
+      properties: ['class'],
+      scale: 10
+    });
+
+    // Train Random Forest Classifier
+    var classifier = ee.Classifier.smileRandomForest(100).train({
+      features: trainingData,
+      classProperty: 'class',
+      inputProperties: bands
+    });
+
+    // Classify the image
+    var classified = sentinel2Image.select(bands).classify(classifier);
+    Map.addLayer(classified, {min: 0, max: 5}, 'Land Cover');
+    ```
+
 ---
 
 ## 🛰️ K-Means Clustering (Unsupervised)
@@ -74,6 +100,25 @@ Unsupervised learning is useful for exploratory data analysis and identifying na
 
     # Get cluster assignments
     clusters <- km_result$cluster
+    ```
+
+=== "GEE (JavaScript)"
+
+    ```javascript
+    // Select bands for clustering
+    var bands = ['B2', 'B3', 'B4', 'B8'];
+    var training = sentinel2Image.select(bands).sample({
+      region: areaOfInterest,
+      scale: 10,
+      numPixels: 5000
+    });
+
+    // Instantiate Clusterer and Train
+    var clusterer = ee.Clusterer.wekaKMeans(5).train(training);
+
+    // Cluster the input image
+    var result = sentinel2Image.select(bands).cluster(clusterer);
+    Map.addLayer(result.randomVisualizer(), {}, 'Clusters');
     ```
 
 ---
@@ -113,5 +158,28 @@ Often used in geospatial science for predicting binary outcomes like landslide s
     probabilities <- predict(logit_model, type = "response")
     ```
 
-!!! info "Choosing the Language"
-    While **Python** is the industry standard for deep learning (PyTorch/TensorFlow) and large-scale cloud processing (GEE), **R** remains exceptionally strong for statistical spatial analysis and high-quality cartographic plotting (`ggplot2`, `sf`).
+=== "GEE (JavaScript)"
+
+    ```javascript
+    // Prepare training data with presence (1) and absence (0) points
+    var trainingData = points.sampleRegions({
+      collection: points,
+      properties: ['occurrence'],
+      scale: 30
+    });
+
+    // Train GLM Model
+    var classifier = ee.Classifier.smileCart().train({
+      features: trainingData,
+      classProperty: 'occurrence',
+      inputProperties: ['slope', 'aspect', 'rainfall', 'lulc']
+    });
+
+    // For actual Logistic Regression (Logit), GEE typically uses 
+    // ee.Classifier.libsvm() or linear models via ee.Algorithms.
+    ```
+
+!!! info "Choosing the Platform"
+    ***Python**: Local processing with extreme flexibility.
+    *   **R**: Statistical depth and visualization.
+    *   **GEE (JavaScript)**: Cloud-native processing of planetary-scale datasets with zero local setup.
