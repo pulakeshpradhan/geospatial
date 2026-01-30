@@ -1,0 +1,26 @@
+:root {
+    --md-primary-fg-color: #008080;
+    /* Teal */
+    --md-primary-fg-color--light: #33a6a6;
+    --md-primary-fg-color--dark: #004d4d;
+}
+
+.md-header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset h1 {
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+}
+
+.md-button--primary {
+    background-color: var(--md-primary-fg-color) !important;
+    border-color: var(--md-primary-fg-color) !important;
+}
+
+code {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
