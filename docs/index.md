@@ -37,20 +37,36 @@ Processing 10,000 satellite images locally would crash most workstations. By usi
 <div class="grid cards" markdown>
 
 - :material-language-python:{ .lg .middle } **Python for GIS**
-    The "Swiss Army Knife" of spatial analysis. We cover everything from `Shapely` geometry logic to `GeoPandas` dataframes and `Rasterio` pixel manipulation.
-    [Dive Deeper &raquo;](python_gis.md)
 
-- :material-web:{ .lg .middle } **Cloud Computing (GEE)**
-    Harness the power of Google's data centers. Learn to query the entire Landsat and Sentinel archives without downloading a single file.
-    [Dive Deeper &raquo;](gee_geemap.md)
+    ---
 
-- :material-chart-line:{ .lg .middle } **Geospatial Intelligence (AI/ML)**
-    Bridge the gap between raw pixels and actionable insights. We implement Random Forest, U-Net architectures, and clustering.
-    [Dive Deeper &raquo;](ml_geospatial.md)
+    Automate spatial analysis using GeoPandas, Rasterio, and Shapely.
 
-- :material-database:{ .lg .middle } **Spatial Databases & STAC**
-    Master the infrastructure behind the data. Understanding PostGIS, COGs, and STAC API is critical for modern data engineering.
-    [Dive Deeper &raquo;](index.md)
+    [:octicons-arrow-right-24: Dive Deeper](python_gis.md)
+
+- :material-web:{ .lg .middle } **Cloud Computing**
+
+    ---
+
+    Scale your analysis to a planetary level with Google Earth Engine (GEE).
+
+    [:octicons-arrow-right-24: Dive Deeper](gee_geemap.md)
+
+- :material-chart-line:{ .lg .middle } **Machine Learning**
+
+    ---
+
+    Implement Random Forest, CNNs, and Clustering for LULC and spatial prediction.
+
+    [:octicons-arrow-right-24: Dive Deeper](ml_geospatial.md)
+
+- :material-book-open-variant:{ .lg .middle } **Guided Tutorials**
+
+    ---
+
+    Step-by-step curricula for all skill levels.
+
+    [:octicons-arrow-right-24: Dive Deeper](tutorials.md)
 
 </div>
 
@@ -96,6 +112,7 @@ Once you understand the math, apply it to the world. Using GEE and `geemap`, you
 ## 📈 Future Horizons
 
 The field of Geospatial Science is rapidly evolving. We are actively adding modules on:
+
 - **SAR Analysis**: Using Radar data (Sentinel-1) for flood mapping and forest monitoring.
 - **UAV Photogrammetry**: Processing drone data with Python.
 - **Digital Twins**: Creating 3D representations of urban environments using LiDAR and Mesh data.

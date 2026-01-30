@@ -90,25 +90,50 @@ Geospatial coding is a vast field. If you've finished the modules here, we recom
     "Documentation is a love letter that you write to your future self." — *Damian Conway*.
     As you go through these tutorials, comment your code, track your versions on GitHub, and never stop questioning the spatial patterns you see.
 
+<div class="grid cards" markdown>
+
+* :material-numeric-1-circle:{ .lg .middle } **Level 1: Foundations**
+
+    ---
+
+    Master the basics of data structures and environment setup.
+
+  * [Setting up Conda/Mamba](python_gis.md)
+  * [Introduction to GeoPandas](python_gis.md)
+  * [Basic Vector Operations](python_gis.md)
+
+* :material-numeric-2-circle:{ .lg .middle } **Level 2: Cloud Computing**
+
+    ---
+
+    Transition your local workflows to the cloud for planetary scale.
+
+  * [Introduction to GEE](gee_geemap.md)
+  * [Sentinel-2 Data Exploration](gee_geemap.md)
+  * [Time-series Analysis](gee_geemap.md)
+
+* :material-numeric-3-circle:{ .lg .middle } **Level 3: Advanced Intelligence**
+
+    ---
+
+    Integrate your spatial skills with predictive modeling.
+
+  * [Random Forest for LULC](ml_geospatial.md)
+  * [Unsupervised Clustering](ml_geospatial.md)
+  * [Statistical Modeling (PR/Logit)](ml_geospatial.md)
+
+</div>
+
 ---
 
-<style>
-.tutorial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-.tutorial-card {
-    padding: 1.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    background: #f8fafc;
-    transition: all 0.3s ease;
-}
-.tutorial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #3b82f6;
-}
-</style>
+## 📈 Completion Guide
+
+Check off your achievements as you progress through the hub:
+
+* [ ] Install local geospatial environment
+* [ ] Create your first Buffer Map in Python
+* [ ] Authenticate GEE on your machine
+* [ ] Run a classification model on GEE
+
+!!! quote "Geospatial Wisdom"
+    "The use of GIS is limited only by the imagination of those who use it." — *Jack Dangermond*
