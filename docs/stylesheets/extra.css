@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-fg-color--light: #5c6bc0;
+  --md-primary-fg-color--dark: #303f9f;
+  --md-accent-fg-color: #ec4899;
+
+  --capsule-radius: 100px;
+  --panel-radius: 32px;
+  --glass: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #ffffff;
+  --glass: rgba(15, 23, 42, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.05) 0px, transparent 50%);
+}
+
+[data-md-color-scheme="slate"] body {
+  background-color: #020617;
+}
+
+/* GEEMAP STYLE HEADER (Solid & Professional) */
+.md-header {
+  background-color: var(--md-primary-fg-color) !important;
+  height: 64px !important;
+  color: white !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.md-header__inner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  padding: 0 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* SEARCH BAR INTEGRATED (Geemap style) */
+.md-search {
+  padding: 0.4rem 0 !important;
+}
+
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-radius: var(--capsule-radius) !important;
+  transition: all 0.3s ease !important;
+  height: 38px !important;
+  width: 250px !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.md-search__input {
+  height: 38px !important;
+  color: white !important;
+}
+
+.md-search__form:hover,
+.md-search__input:focus+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  width: 400px !important;
+}
+
+/* THEME TOGGLE SWITCH */
+.md-header__option {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: var(--capsule-radius) !important;
+  width: 58px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 2px !important;
+  margin-left: 15px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+[data-md-color-scheme="slate"] .md-header__option {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.md-header__button.md-icon {
+  background: white !important;
+  border-radius: 50% !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--md-accent-fg-color) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+[data-md-color-scheme="default"] .md-header__button.md-icon {
+  transform: translateX(0);
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-icon {
+  transform: translateX(26px);
+}
+
+.md-header__button.md-icon svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* NAVIGATION TABS */
+.md-tabs {
+  margin-top: 10px;
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.md-tabs__list {
+  justify-content: center !important;
+  gap: 10px;
+}
+
+.md-tabs__link {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 8px 20px !important;
+  border-radius: var(--capsule-radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.md-tabs__link--active {
+  background: var(--md-primary-fg-color) !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* MAIN CONTENT */
+.md-main__inner {
+  margin-top: 2rem !important;
+  display: flex !important;
+}
+
+.md-content {
+  background: var(--glass) !important;
+  margin-top: 1rem !important;
+  border-radius: var(--panel-radius) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--shadow-premium) !important;
+  padding: 3rem !important;
+}
+
+/* FOOTER */
+.md-footer-meta {
+  background: transparent !important;
+}
+
+.md-footer-meta__inner {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--capsule-radius);
+  padding: 1rem 2rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 2rem !important;
+}

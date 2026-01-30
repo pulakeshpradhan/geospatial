@@ -1,5 +1,12 @@
-site_name: My MkDocs Material Documentation
-site_url: https://sitename.example
+site_name: Pulakesh Pradhan | MkDocs Premium
+site_url: https://pulakeshpradhan.github.io/samplemkdocs/
+site_description: A modern documentation site based on the 2024 Material theme.
+site_author: Pulakesh Pradhan
+
+repo_name: pulakeshpradhan/samplemkdocs
+repo_url: https://github.com/pulakeshpradhan/samplemkdocs
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   font:
@@ -8,23 +15,35 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.ico
   features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
     - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - navigation.indexes
   palette:
-    # Dark Mode
+    # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
+        name: Switch to light mode
+      primary: custom
+      accent: indigo
+      media: "(prefers-color-scheme: dark)"
 
     # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+        name: Switch to dark mode
+      primary: custom
+      accent: indigo
+      media: "(prefers-color-scheme: light)"
 
 markdown_extensions:
   - attr_list
@@ -47,11 +66,25 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+nav:
+  - Tutorials: tutorials.md
+  - Welcome: index.md
+  - Features:
+      - Admonitions: admonitions.md
+      - Code Examples: code-examples.md
+      - Content Tabs: content-tabs.md
+      - Diagrams: diagram-examples.md
+
 extra:
   social:
-    - icon: simple/youtube
-      link: https://youtube.com/@james-willett
-    - icon: simple/linkedin
-      link: https://linkedin.com/in/willettjames
+    - icon: fontawesome/brands/github
+      link: https://github.com/pulakeshpradhan
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/pulakeshpradhan
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/pulakesh
 
-copyright: Copyright &copy; 2024 James Willett
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; 2026 Pulakesh Pradhan
