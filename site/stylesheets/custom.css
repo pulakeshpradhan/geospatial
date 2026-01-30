@@ -1,8 +1,8 @@
 :root {
-    --md-primary-fg-color: #008080;
-    /* Teal */
-    --md-primary-fg-color--light: #33a6a6;
-    --md-primary-fg-color--dark: #004d4d;
+    --md-primary-fg-color: #2196f3;
+    /* Blue */
+    --md-primary-fg-color--light: #64b5f6;
+    --md-primary-fg-color--dark: #1976d2;
 }
 
 .md-header {
@@ -24,7 +24,8 @@ code {
     background-color: #f5f5f5;
     border-radius: 4px;
     padding: 2px 4px;
-    color: #c7254e;
+    color: #1976d2;
+    /* Match primary dark */
 }
 
 .md-footer {
