@@ -33,6 +33,8 @@ theme:
     - search.highlight
     - content.code.copy
     - content.tooltips
+    - content.action.edit
+    - content.action.view
 
 markdown_extensions:
   - admonition
@@ -48,6 +50,15 @@ nav:
   - Python for GIS: python_gis.md
   - GEE & Geemap: gee_geemap.md
   - Tutorials: tutorials.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pulakeshpradhan/geospatial
+    - icon: fontawesome/actions/git-pull-request
+      link: https://github.com/pulakeshpradhan/geospatial/pulls
+    - icon: fontawesome/actions/git-issue
+      link: https://github.com/pulakeshpradhan/geospatial/issues
 
 extra_css:
   - stylesheets/custom.css
