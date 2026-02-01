@@ -48,6 +48,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Python for GIS: python_gis.md
+  - Geospatial Data Sources: data_sources.md
   - GEE & Geemap: gee_geemap.md
   - ML for Geospatial: ml_geospatial.md
   - Tutorials: tutorials.md

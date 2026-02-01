@@ -208,4 +208,4 @@ A: Run `gdf['geometry'] = gdf.make_valid()`. This fixes self-intersecting loops 
 !!! success "Conclusion"
     Mastering Python for GIS is a superpower. It allows you to take raw geospatial data and turn it into predictive models, high-performance web maps, and rigorous scientific research.
 
-[Next: Cloud Computing with GEE & Geemap &raquo;](gee_geemap.md){ .md-button .md-button--primary }
+[Next: Modern Geospatial Data Sources &raquo;](data_sources.md){ .md-button .md-button--primary }
