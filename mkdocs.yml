@@ -45,6 +45,14 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+  - minify:
+      minify_html: true
+
 nav:
   - Home: index.md
   - Python for GIS: python_gis.md
