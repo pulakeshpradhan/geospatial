@@ -1,0 +1,27 @@
+name: geo_master
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - geopandas
+  - rasterio
+  - shapely
+  - pyproj
+  - libpysal
+  - esda
+  - leafmap
+  - fiona
+  - pycrs
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - pystac-client
+  - stackstac
+  - xarray
+  - zarr
+  - pyarrow
+  - scikit-learn
+  - geemap
+  - ee
